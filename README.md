@@ -1,3 +1,3 @@
 # back_carAppSQL
 
-![backend](carbon.png)
+![backend](public/images/carbon.png)
