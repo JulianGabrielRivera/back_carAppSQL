@@ -30,4 +30,37 @@ router.post("/create/user", (req, res, next) => {
   // }
 });
 
+router.get("/user/:id", (req, res) => {
+  console.log("hi");
+  const { id } = req.params;
+  const query = `SELECT
+task_name
+FROM tasks
+INNER JOIN users as u ON u.id = tasks.user_id
+
+WHERE u.id = ?`;
+
+  const query2 = `SELECT first_name,last_name from users as u WHERE u.id = ?`;
+  // const query = `
+  //   SELECT u.first_name, u.last_name, t.task_name
+  //   FROM tasks AS t
+  //   INNER JOIN users AS u ON u.id = t.user_id
+  //   WHERE u.id = ?`;
+
+  const values = id;
+  connection.query(query, [values], function (err, results, fields) {
+    if (err) {
+      return res.status(500).json({ error: "Database query error." });
+    }
+
+    connection.query(query2, [values], function (err, results2, fields) {
+      if (err) {
+        return res.status(500).json({ error: "Database query error." });
+      }
+      console.log(results);
+      res.json({ queryOne: results, queryTwo: results2 });
+    });
+  });
+});
+
 module.exports = router;
