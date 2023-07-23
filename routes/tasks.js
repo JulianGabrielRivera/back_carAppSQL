@@ -80,5 +80,17 @@ router.post("/boolean", (req, res, next) => {
     }
   });
 });
+router.post("/delete", (req, res) => {
+  const query = "DELETE FROM tasks WHERE id = ?";
+  const values = req.body.id;
+  console.log("id");
+  connection.query(query, values, function (err, results, fields) {
+    if (err) {
+      console.log(err);
+    }
+    console.log(results);
+    res.json(results);
+  });
+});
 
 module.exports = router;
