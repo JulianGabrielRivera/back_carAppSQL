@@ -31,7 +31,6 @@ router.post("/create/user", (req, res, next) => {
 });
 
 router.get("/user/:id", (req, res) => {
-  console.log("hi");
   const { id } = req.params;
   const query = `SELECT tasks.id,
 tasks.task_name, tasks.priority

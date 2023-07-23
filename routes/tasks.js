@@ -3,7 +3,6 @@ var router = express.Router();
 const connection = require("../db/database.js");
 
 router.post("/create", (req, res, next) => {
-  console.log(req.body);
   const allUsersQuery = () => {
     const queryAllUsers = "SELECT * from users";
 
@@ -15,7 +14,7 @@ router.post("/create", (req, res, next) => {
     });
   };
   // try {
-  const query = "INSERT INTO tasks(name,user_id) VALUES (?)";
+  const query = "INSERT INTO tasks(task_name,user_id) VALUES (?)";
   const values = [req.body.taskName, req.body.id];
   const queryThree = `UPDATE users SET user_task = 0 WHERE users.id = ${req.body.id}`;
 
@@ -38,7 +37,6 @@ router.post("/create", (req, res, next) => {
 });
 
 router.post("/boolean", (req, res, next) => {
-  console.log("hey", req.body.id);
   const allUsersQuery = () => {
     const queryAllUsers = "SELECT * from users";
 
