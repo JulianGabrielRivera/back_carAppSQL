@@ -33,11 +33,10 @@ router.post("/create/user", (req, res, next) => {
 router.get("/user/:id", (req, res) => {
   console.log("hi");
   const { id } = req.params;
-  const query = `SELECT
-task_name
-FROM tasks
+  const query = `SELECT tasks.id,
+tasks.task_name, tasks.priority
+FROM tasks 
 INNER JOIN users as u ON u.id = tasks.user_id
-
 WHERE u.id = ?`;
 
   const query2 = `SELECT first_name,last_name from users as u WHERE u.id = ?`;
@@ -60,6 +59,17 @@ WHERE u.id = ?`;
       console.log(results);
       res.json({ queryOne: results, queryTwo: results2 });
     });
+  });
+});
+router.post("/user/update", (req, res) => {
+  console.log(req.body);
+  const query = `UPDATE tasks SET priority = ? WHERE id = ${req.body.id}`;
+  const values = req.body.priority;
+  connection.query(query, [values], function (err, results, fields) {
+    if (err) {
+      console.log(err);
+    }
+    res.json(results);
   });
 });
 
