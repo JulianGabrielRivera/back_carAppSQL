@@ -14,8 +14,8 @@ router.post("/create", (req, res, next) => {
     });
   };
   // try {
-  const query = "INSERT INTO tasks(task_name,user_id) VALUES (?)";
-  const values = [req.body.taskName, req.body.id];
+  const query = "INSERT INTO tasks(task_name,priority,user_id) VALUES (?)";
+  const values = [req.body.taskName, req.body.priority, req.body.id];
   const queryThree = `UPDATE users SET user_task = 0 WHERE users.id = ${req.body.id}`;
 
   connection.query(query, [values], function (err, results, fields) {

@@ -23,6 +23,7 @@ router.post("/create/user", (req, res, next) => {
     if (err) {
       console.log(err);
     }
+
     res.json(results);
   });
   // } catch (err) {
