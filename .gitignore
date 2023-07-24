@@ -52,6 +52,8 @@ typings/
 *.tgz
 backend/config/keys.json
 # Yarn Integrity file
+keys.json
+config/keys.json
 .yarn-integrity
 
 # dotenv environment variables file
