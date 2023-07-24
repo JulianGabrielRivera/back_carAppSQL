@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "car-project-393721",
+  "private_key_id": "77ed9b103d48de19e7edb5cbe204acb50d9ac4b9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC272ytUfe6/oHk\nbzQP5RxlTO/raLeRPJ8CgdO94JkFTNadq14rNkjx5CbD/OiB4NHsSBuIg5JKyTBD\nkjTLHW45hlFPeWRG2wMkDDLhChjapbAj9Q7GEgRUhXwNV6qcy+ChDmyaK7RI8Ngp\nO1cfa1FYPsAwUXQfDcez6TlAzMz4/cUzjZ+gWoHICR3HdCDsHgmaztt7OUZx5M/K\nJWnpdN5btyvk3kGR9tCvrcfTJE3rRweTrA3DufzQLZwe4NB0WrUFPoL0NaSUn/sV\nZNhEgu87xg9ZGbxgvSC3HgycXEMDEqHesXIQMLdH6pznpQ02sZ2Ll3V7POm3eS0h\nmj2EfxYZAgMBAAECggEADcKFkKXdNeYF3CpXJqjrkV0PoMvgHt8J8NTWGe6mY+Ur\nMXHd4+8x3mv0VIKV9Ir2D0k/NO38l355kGOTcAG3NEF7pTgyyDeaDWCThSTOyMd0\nr8ezhEd/puHhellxPlkBfOvKVHBcH65p+/P4MidO143kw92kl99f+ZLd2RduhX3k\nMml1f1y8EEib6DJCkV/CFJjxVqLAH2BBRxvBlM486+9SCxH5RYMbI8f06UMZ2OBa\n74UsQDAMQ9uEqeG34R2MmWUURjr42qdUgfbpvG5HOAbEsC06vwX+QYsnjgSJgCLI\nyZVjcY3XNjxZp5hUEzKZbKayr9Xf4ZlHT2jXWNgHDwKBgQD5CQQQMdVfe6u5YsW8\nkSYCQdNyJFWbpbYk72B8DOUhRM59FAvpnA7YmyMsRpzQDcYCXtGvlgSc1OVqRvgG\nMBEJLlfjrChFlTmjaOEx0DB29H0E2LNXzT+Y4kA0st8ian52iKCMVbDGxcdraJXi\naqJEPu4ec8tj+bBGnHAIzet4VwKBgQC8DSlcSal9itSRF1HIeUfF5P19+nilukWj\nsew7ZKjIvULj7A8qGuoJ2NB482FkyHykTq8EL+0TIHNmtzK6YlWUG/zJ2Y23nQ52\n+UY0NiiUJnb9auDaZbMcMzTF2053GyxwSHoBv7rrs12zYbfphFUdC4g3MWAjzGve\nW2dKdpOfDwKBgEEw/wNOSFEKitWo6aKHTK/ik3uZz19Dbf8VOui+Z2ziGjvb95Jb\n6/cABaEdiwdb063jLHkOiH6VrMi5c0wLYSpKG2/aLWCpw8DnP6xOl6FMNz4BjFE7\nxZ47/BrPiGH2Bsz4zy5tcC1YsO+JHVN8HqZG4wbNwTyWrHKPmTR002NZAoGAMEn8\n7frocBl/XkartJwYJyQXSAtSgdQkX9WngNTnVqzrCVYryrcglCi91+E/iD7HavXd\nkWixKzExERZIC36G1UKelkKsVpMZDMoUEgI6R1jdQ1P3q31kEgDAM3KOYp1yut6R\nnfNbD31+uTqFnIxjwtKcRvgB5Q9wP6gfDQsH+1cCgYEAiSzdA5ni3QAhVs3ObO5k\nj0HhXBMDqmMxVuzsQseJSitc0EbtuLgALG/j7aDcmqVBzWf9Dan2LJx4yzp3TIw4\nsr7O3clYCv6M2eSnJF3yFE7SNLeUrj3p+ilWlmodvItA1rbtVfuaIZCavxPtCkUL\nWbNo6bvluRvTeg6QFfS46QM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "car-project-service@car-project-393721.iam.gserviceaccount.com",
+  "client_id": "111534034177311225646",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/car-project-service%40car-project-393721.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

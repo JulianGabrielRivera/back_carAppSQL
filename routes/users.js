@@ -16,8 +16,8 @@ router.get("/", function (req, res, next) {
 router.post("/create/user", (req, res, next) => {
   console.log(req.body);
   // try {
-  const query = "INSERT INTO users(first_name,last_name) VALUES (?)";
-  const values = [req.body.first_name, req.body.last_name];
+  const query = "INSERT INTO users(first_name,last_name,image) VALUES (?)";
+  const values = [req.body.first_name, req.body.last_name, req.body.image];
 
   connection.query(query, [values], function (err, results, fields) {
     if (err) {
