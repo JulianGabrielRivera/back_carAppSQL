@@ -1,7 +1,37 @@
 var express = require("express");
 var router = express.Router();
 const connection = require("../db/database.js");
+const Tesseract = require("tesseract.js");
+const { createWorker } = require("tesseract.js");
 
+router.post("/tesseract", (req, res, next) => {
+  console.log(req.body);
+  const query = "SELECT image from users WHERE id = ?";
+  const values = 11;
+  connection.query(query, values, function (err, results, fields) {
+    if (err) {
+      console.log(err);
+    }
+    console.log(results[0].image, "hiii");
+    Tesseract.recognize(`${results[0].image}`, "eng", {
+      logger: (m) => console.log(m),
+    }).then(({ data: { text } }) => {
+      console.log(text);
+      res.json({ text: text, image: results[0].image });
+    });
+  });
+});
+router.post("/tesseract2", (req, res, next) => {
+  console.log(req.body, "hi22");
+  
+  
+  Tesseract.recognize(`${req.body.image2}`, "eng", {
+    logger: (m) => console.log(m),
+  }).then(({ data: { text } }) => {
+    console.log(text);
+    res.json(text);
+  });
+});
 /* GET users listing. */
 router.get("/", function (req, res, next) {
   const query = "SELECT * from users";

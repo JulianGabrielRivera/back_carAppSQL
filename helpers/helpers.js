@@ -20,6 +20,7 @@ const uploadImage = (file) =>
     const blob = bucket.file(originalname.replace(/ /g, "_"));
     const blobStream = blob.createWriteStream({
       resumable: false,
+      predefinedAcl: "publicRead", // Set the access control to public-read
     });
     blobStream
       .on("finish", () => {
