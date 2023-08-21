@@ -20,8 +20,9 @@ router.post("/create/user", (req, res, next) => {
   const values = [req.body.first_name, req.body.last_name, req.body.image];
 
   connection.query(query, [values], function (err, results, fields) {
+    console.log(results);
     if (err) {
-      console.log(err);
+      return res.status(500).json({ error: "Failed to create user" });
     }
 
     res.json(results);
